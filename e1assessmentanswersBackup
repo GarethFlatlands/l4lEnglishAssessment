@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learn For Life - Pre-Entry/E1 Assessment</title>
+    <link rel="stylesheet" href="./assets/css/assessmentform.css">
+  </head>
+  <body>
+
+    <?php
+    // Strips whitespace and special characters from user submitted answers
+      function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+    ?>
+
+    <header>
+      <h1>Learn For Life - Pre-Entry/E1 Assessment</h1>
+    </header>
+
+    <div id="mainContainer">
+    <div class="personalDetails">
+      <h2>Personal Details</h2>
+      <?php
+      // Get the variables from index.html and store them, with defaults if not supplied
+        if(isset($_POST['username'])){
+          $username = test_input($_POST["username"]);
+        }else{
+          $username = "Name not set in POST Method";
+        }
+        if(isset($_POST['phoneno'])){
+          $phoneno = test_input($_POST["phoneno"]);
+        }else{
+          $phoneno = "Phone number not set in POST Method";
+        }
+        if(isset($_POST['todaydate'])){
+          $todaydate = test_input($_POST["todaydate"]);
+        }else{
+          $todaydate = "Name not set in POST Method";
+        }
+      ?>
+        Name: <?php echo $username; ?><br>
+        Telephone Number: <?php echo $phoneno; ?><br>
+        Date Completed: <?php echo $todaydate; ?><br>
+    </div>
+
+    <div id="question1">
+      <h2>1. The Alphabet</h2>
+      <h3>Write the correct letters in the empty boxes</h3>
+      <?php
+      // Get the variables from index.html and store them, with defaults if not supplied
+        if(isset($_POST['q1b'])){
+          $q1b = test_input($_POST["q1b"]);
+        }else{
+          $q1b = "#";
+        }
+        if(isset($_POST['q1c'])){
+          $q1c = test_input($_POST["q1c"]);
+        }else{
+          $q1c = "#";
+        }
+        if(isset($_POST['q1f'])){
+          $q1f = test_input($_POST["q1f"]);
+        }else{
+          $q1f = "#";
+        }
+        if(isset($_POST['q1g'])){
+          $q1g = test_input($_POST["q1g"]);
+        }else{
+          $q1g = "#";
+        }
+        if(isset($_POST['q1i'])){
+          $q1i = test_input($_POST["q1i"]);
+        }else{
+          $q1i = "#";
+        }
+        if(isset($_POST['q1l'])){
+          $q1l = test_input($_POST["q1l"]);
+        }else{
+          $q1l = "#";
+        }
+        if(isset($_POST['q1m'])){
+          $q1m = test_input($_POST["q1m"]);
+        }else{
+          $q1m = "#";
+        }
+        if(isset($_POST['q1o'])){
+          $q1o = test_input($_POST["q1o"]);
+        }else{
+          $q1o = "#";
+        }
+        if(isset($_POST['q1q'])){
+          $q1q = test_input($_POST["q1q"]);
+        }else{
+          $q1q = "#";
+        }
+        if(isset($_POST['q1t'])){
+          $q1t = test_input($_POST["q1t"]);
+        }else{
+          $q1t = "#";
+        }
+        if(isset($_POST['q1u'])){
+          $q1u = test_input($_POST["q1u"]);
+        }else{
+          $q1u = "#";
+        }
+        if(isset($_POST['q1w'])){
+          $q1w = test_input($_POST["q1w"]);
+        }else{
+          $q1w = "#";
+        }
+        if(isset($_POST['q1x'])){
+          $q1x = test_input($_POST["q1x"]);
+        }else{
+          $q1x = "#";
+        }
+        if(isset($_POST['q1z'])){
+          $q1z = test_input($_POST["q1z"]);
+        }else{
+          $q1z = "#";
+        }
+      ?>
+          <input type="text" class="letterInput" value="A" disabled>
+          <input type="text" class="letterInput" name="q1b" value="<?php echo $q1b; ?>" disabled>
+          <input type="text" class="letterInput" name="q1c" value="<?php echo $q1c; ?>" disabled>
+          <input type="text" class="letterInput" value="D" disabled>
+          <input type="text" class="letterInput" value="E" disabled>
+          <input type="text" class="letterInput" name="q1f" value="<?php echo $q1f; ?>" disabled>
+          <input type="text" class="letterInput" name="q1g" value="<?php echo $q1g; ?>" disabled>
+          <input type="text" class="letterInput" value="H" disabled>
+          <input type="text" class="letterInput" name="q1i" value="<?php echo $q1i; ?>" disabled>
+          <input type="text" class="letterInput" value="J" disabled>
+          <input type="text" class="letterInput" value="K" disabled>
+          <input type="text" class="letterInput" name="q1l" value="<?php echo $q1l; ?>" disabled>
+          <input type="text" class="letterInput" name="q1m" value="<?php echo $q1m; ?>" disabled>
+          <input type="text" class="letterInput" value="N" disabled>
+          <input type="text" class="letterInput" name="q1o" value="<?php echo $q1o; ?>" disabled>
+          <input type="text" class="letterInput" value="P" disabled>
+          <input type="text" class="letterInput" name="q1q" value="<?php echo $q1q; ?>" disabled>
+          <input type="text" class="letterInput" value="R" disabled>
+          <input type="text" class="letterInput" value="S" disabled>
+          <input type="text" class="letterInput" name="q1t" value="<?php echo $q1t; ?>" disabled>
+          <input type="text" class="letterInput" name="q1u" value="<?php echo $q1u; ?>" disabled>
+          <input type="text" class="letterInput" value="V" disabled>
+          <input type="text" class="letterInput" name="q1w" value="<?php echo $q1w; ?>" disabled>
+          <input type="text" class="letterInput" name="q1x" value="<?php echo $q1x; ?>" disabled>
+          <input type="text" class="letterInput" value="Y" disabled>
+          <input type="text" class="letterInput" name="q1z" value="<?php echo $q1z; ?>" disabled><br>
+      </div>
+
+      <div id="question2">
+        <h2>2. Write the capital letter next to the letters below.</h2>
+        <?php
+        // Get the variables from index.html and store them, with defaults if not supplied
+          if(isset($_POST['q21'])){
+            $q21 = test_input($_POST["q21"]);
+          }else{
+            $q21 = "#";
+          }
+          if(isset($_POST['q22'])){
+            $q22 = test_input($_POST["q22"]);
+          }else{
+            $q22 = "#";
+          }
+          if(isset($_POST['q23'])){
+            $q23 = test_input($_POST["q23"]);
+          }else{
+            $q23 = "#";
+          }
+          if(isset($_POST['q24'])){
+            $q24 = test_input($_POST["q24"]);
+          }else{
+            $q24 = "#";
+          }
+          if(isset($_POST['q25'])){
+            $q25 = test_input($_POST["q25"]);
+          }else{
+            $q25 = "#";
+          }
+        ?>
+        <ul>
+          <li>t - <input type="text" class="letterInput" name="q21" value="<?php echo $q21; ?>"  disabled></li>
+          <li>r - <input type="text" class="letterInput" name="q22" value="<?php echo $q22; ?>"  disabled></li>
+          <li>b - <input type="text" class="letterInput" name="q23" value="<?php echo $q23; ?>"  disabled></li>
+          <li>e - <input type="text" class="letterInput" name="q24" value="<?php echo $q24; ?>"  disabled></li>
+          <li>h - <input type="text" class="letterInput" name="q25" value="<?php echo $q25; ?>"  disabled></li>
+        </ul>
+      </div>
+
+      <div id="question3">
+        <h2>3. Put the days of the week in the correct order.</h2>
+        <?php
+        if(isset($_POST['q3text'])){
+          $q3text = test_input($_POST["q3text"]);
+        }else{
+          $q3text = "#";
+        }
+        ?>
+        <p>Tuesday, Sunday, Thursday, Wednesday, Monday, Saturday, Friday</p>
+        <textarea name="q3text" rows="1" cols="80" disabled><?php echo $q3text ?></textarea>
+      </div>
+
+      <div id="question4">
+        <?php
+        if(isset($_POST['q42'])){
+          $q42 = test_input($_POST["q42"]);
+        }else{
+          $q42 = "#";
+        }
+        if(isset($_POST['q43'])){
+          $q43 = test_input($_POST["q43"]);
+        }else{
+          $q43 = "#";
+        }
+        if(isset($_POST['q46'])){
+          $q46 = test_input($_POST["q46"]);
+        }else{
+          $q46 = "#";
+        }
+        if(isset($_POST['q48'])){
+          $q48 = test_input($_POST["q48"]);
+        }else{
+          $q48 = "#";
+        }
+        if(isset($_POST['q410'])){
+          $q410 = test_input($_POST["q410"]);
+        }else{
+          $q410 = "#";
+        }
+        ?>
+        <h2>4. Fill in the missing numbers from 1 – 10.</h2>
+        <input type="text" class="letterInput" name="q41" value="1" disabled>
+        <input type="text" class="letterInput" name="q42" value="<?php echo $q42; ?>" disabled>
+        <input type="text" class="letterInput" name="q43" value="<?php echo $q43; ?>" disabled>
+        <input type="text" class="letterInput" name="q44" value="4" disabled>
+        <input type="text" class="letterInput" name="q45" value="5" disabled>
+        <input type="text" class="letterInput" name="q46" value="<?php echo $q46; ?>" disabled>
+        <input type="text" class="letterInput" name="q47" value="7" disabled>
+        <input type="text" class="letterInput" name="q48" value="<?php echo $q48; ?>" disabled>
+        <input type="text" class="letterInput" name="q49" value="9" disabled>
+        <input type="text" class="letterInput" name="q410" value="<?php echo $q410; ?>" disabled>
+      </div>
+
+      <div id="question5">
+        <h2>5. Fill in the form below.</h2>
+        <?php
+          if(isset($_POST['q5name'])){
+            $q5name = test_input($_POST["q5name"]);
+          }else{
+            $q5name = "#";
+          }
+          if(isset($_POST['q5surname'])){
+            $q5surname = test_input($_POST["q5surname"]);
+          }else{
+            $q5surname = "#";
+          }
+          if(isset($_POST['q5dob'])){
+            $q5dob = test_input($_POST["q5dob"]);
+          }else{
+            $q5dob = "#";
+          }
+          if(isset($_POST['q5address'])){
+            $q5address = test_input($_POST["q5address"]);
+          }else{
+            $q5address = "#";
+          }
+          if(isset($_POST['q5postcode'])){
+            $q5postcode = test_input($_POST["q5postcode"]);
+          }else{
+            $q5postcode = "#";
+          }
+          if(isset($_POST['q5city'])){
+            $q5city = test_input($_POST["q5city"]);
+          }else{
+            $q5city = "#";
+          }
+          if(isset($_POST['q5county'])){
+            $q5county = test_input($_POST["q5county"]);
+          }else{
+            $q5county = "#";
+          }
+          if(isset($_POST['q5country'])){
+            $q5country = test_input($_POST["q5country"]);
+          }else{
+            $q5country = "#";
+          }
+        ?>
+        <p>First name: <br><input type="text" name="q5name" value="<?php echo $q5name; ?>" disabled></p>
+        <p>Surname: <br><input type="text" name="q5surname" value="<?php echo $q5surname; ?>" disabled></p>
+        <p>Date of Birth: <br><input type="text" name="q5dob" value="<?php echo $q5dob; ?>" disabled></p>
+        <p>Address: <br><input type="text" name="q5address" value="<?php echo $q5address; ?>" disabled></p>
+        <p>Postcode: <br><input type="text" name="q5postcode" value="<?php echo $q5postcode; ?>" disabled></p>
+        <p>City: <br><input type="text" name="q5city" value="<?php echo $q5city; ?>" disabled></p>
+        <p>County: <br><input type="text" name="q5county" value="<?php echo $q5county; ?>" disabled></p>
+        <p>Country: <br><input type="text" name="q5country" value="<?php echo $q5country; ?>" disabled></p>
+      </div>
+
+      <div id="question6">
+        <?php
+          if(isset($_POST['q61'])){
+            $q61 = test_input($_POST["q61"]);
+          }else {
+            $q61 = "#";
+          }
+          if(isset($_POST['q62'])){
+            $q62 = test_input($_POST["q62"]);
+          }else {
+            $q62 = "#";
+          }
+          if(isset($_POST['q63'])){
+            $q63 = test_input($_POST["q63"]);
+          }else {
+            $q63 = "#";
+          }
+          if(isset($_POST['q64'])){
+            $q64 = test_input($_POST["q64"]);
+          }else {
+            $q64 = "#";
+          }
+          if(isset($_POST['q65'])){
+            $q65 = test_input($_POST["q65"]);
+          }else {
+            $q65 = "#";
+          }
+        ?>
+        <h2>6. Write the words in the correct order to make a sentence.</h2>
+        <p class="example">Example: on He went Monday: <br><input type="text" name="" value="He went on Monday" disabled></p>
+        <p>My is hot coffee: <br><input type="text" name="q61" value="<?php echo $q61; ?>" disabled></p>
+        <p>making She tea is: <br><input type="text" name="q62" value="<?php echo $q62; ?>" disabled></p>
+        <p>shop went They to the: <br><input type="text" name="q63" value="<?php echo $q63; ?>" disabled></p>
+        <p>is running She fast: <br><input type="text" name="q64" value="<?php echo $q64; ?>" disabled></p>
+        <p>like I apples eating: <br><input type="text" name="q65" value="<?php echo $q65; ?>" disabled></p>
+      </div>
+
+      <div id="question7">
+        <?php
+        if(isset($_POST['q7text'])){
+          $q7text = test_input($_POST["q7text"]);
+        }else{
+          $q7text = "#";
+        }
+        ?>
+        <h2>7. Write a paragraph about yourself.</h2>
+        <p>These questions may help you:<br>
+          Where are you from?<br>
+          What do you like doing?<br>
+          Why do you want to learn English?</p>
+          <textarea name="q7text" rows="8" cols="80" disabled><?php echo $q7text ?></textarea>
+      </div>
+
+      <div id="question8">
+        <?php
+        if(isset($_POST['q8text'])){
+          $q8text = test_input($_POST["q8text"]);
+        }else{
+          $q8text = "#";
+        }
+        ?>
+        <h2>8. You are too ill to go to College. Write a message to your teacher.</h2>
+        <textarea name="q8text" rows="8" cols="80" disabled><?php echo $q8text ?></textarea>
+      </div>
+      </div>
+  </body>
+</html>
